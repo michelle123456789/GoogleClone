@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box; /*ensures padding and border are included in the total width/height, making layout more predictable.*/
+}
+
+body{
+    font-family: "Roboto", sans-serif;
+    display:flex; /*defines a flex container -> enables flex context for all its children*/
+    flex-direction: column; /*establishes main-axis -> here top to bottom (default = row)*/
+    height: 100vh; /*sets the body height to 100% of the viewport height.*/
+    
+}
+
+/*header*/
+
+.header{
+    display: flex; /*.header = horizontal container -> default as flex-direction not set*/
+    justify-content: space-between; /*pushes .header_left and .header_right to the edges*/
+    align-items: center; /*vertically centers content*/
+    padding: 20px 30px;
+    background-color: rgb(202, 240, 227);
+}
+
+.header_right a {/*styles the link*/
+    margin-right: 20px;
+    color:rgba(0, 0, 0, 0.87);
+    font-size: 15px;
+    text-decoration: inherit;
+}
+
+.header_right a:hover{
+    text-decoration: underline; /*when hovering then text underlined*/
+}
+
+.header_right{
+    display: flex; /*is now a flexbox container*/
+    align-items: center;
+    min-width: 13vw; /*minimal width is 13% of viewport width*/
+    justify-content: space-between; /*spreads the children across available space.*/
+}
+
+.header_left .header_apps{
+    margin-right: 10px; /*add spacing to icons*/
+}
+
+/*Main body*/
+
+.mainBody{
+    flex:1; /*allows container to expand (if parent = flex container)*/
+    display:flex;
+    margin-top:12%; /*12% below top flex container)*/
+    flex-direction: column; /*vertical stacking of items*/
+    
+}
+
+.mainBody img{
+    object-fit: contain; /*defines how image should be adapted to container -> contain: content is scaled but aspect ratio is kept will fitting it into the flexbox */
+    height: 100px;
+}
+
+.search_input{
+    display: flex; /*flexbox container*/
+    align-items: center; /*items spread across available space*/
+    border: 1px solid lightgrey;
+    height: 50px;
+    padding: 10px 20px;
+    border-radius: 999px; /*fully rounded pill shape*/
+    width: 75vw;
+    margin:0 auto; /* centers item*/
+    margin-top: 40px;
+    max-width:560px;
+}
+
+.search_input input{/*actual input in search box*/
+    flex:1; /*fills remaining space in .search_input container*/
+    padding:10px 20px;
+    border:none;
+    outline: none;
+}
+
+.search_input .search_apps{
+    color:grey;
+}
+
+.search_buttons{ /*flex container*/
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.search_buttons button{
+    margin:5px;
+    border:none;
+    padding:10px 15px;
+    border-radius: 50px;
+    background-color: #f8f8f8;
+    outline:none;
+    cursor:pointer; /* changes cursor on hover.*/
+ }
