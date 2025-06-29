@@ -51,6 +51,7 @@ body{
 .mainBody{
     flex:1; /*allows container to expand (if parent = flex container)*/
     display:flex;
+    align-items: center;
     margin-top:12%; /*12% below top flex container)*/
     flex-direction: column; /*vertical stacking of items*/
     
@@ -60,6 +61,20 @@ body{
     object-fit: contain; /*defines how image should be adapted to container -> contain: content is scaled but aspect ratio is kept will fitting it into the flexbox */
     height: 100px;
 }
+
+.logo{
+    display: flex;
+    align-items: left;
+    color: #0b57d0;
+}
+
+
+ .search{
+    display:flex;
+    flex:1;
+    align-items: left;
+    flex-direction: column;
+ }
 
 .search_input{
     display: flex; /*flexbox container*/
@@ -77,6 +92,7 @@ body{
 .search_input input{/*actual input in search box*/
     flex:1; /*fills remaining space in .search_input container*/
     padding:10px 20px;
+    font-size: 18px;
     border:none;
     outline: none;
 }
@@ -91,7 +107,7 @@ body{
     justify-content: center;
 }
 
-.search_buttons button{
+.search_buttons input[type=submit]{
     margin:5px;
     border:none;
     padding:10px 15px;
@@ -100,3 +116,75 @@ body{
     outline:none;
     cursor:pointer; /* changes cursor on hover.*/
  }
+
+ .search_buttons input[type=submit]:hover {
+    background-color: #e8e8e8;
+}
+
+
+/*Advanced Search*/
+
+ .advanced_search_input{ /*container with all questions and submit button*/
+    display: flex; /*flexbox container*/
+    flex-direction: column;
+    border: none;
+    border-radius: 5px; /*only slightly rounded corners*/
+    width: 75vw;
+    margin:0 auto; /* centers item*/
+    margin-top: 40px;
+    max-width:660px;
+ }
+
+ /*text "Find pages with.."*/
+ p{
+    padding:10px 0px;
+    font-size: 20px;
+ }    
+
+ /*contains questions for search*/
+.questions{
+    display:flex;
+    flex-direction: column;    
+}
+
+.indiv_question{
+    display:flex;
+    justify-content: space-between;
+    margin:5px;
+}
+
+.questions input[type=text]{
+    font-size: 15px;
+    width:400px;
+    border: 1px solid lightgrey; 
+    border-radius: 3px; /*only slightly rounded corners*/
+    padding: 5px 10px;
+}
+
+.questions label{
+    font-size: 15px;
+    padding: 10px 0px;
+}
+
+/*formats submit button*/
+.advanced_buttons{ /*flex container*/
+    margin-top: 30px;
+    display: flex;
+    justify-content: right;
+}
+
+.advanced_buttons input[type=submit]{
+    margin:5px;
+    border:none;
+    padding:10px 15px;
+    border-radius: 5px;
+    background-color: #4085f5;
+    color: white;
+    cursor:pointer; /* changes cursor on hover.*/
+ }
+
+ .advanced_buttons input[type=submit]:hover{
+    background-color: #0f64ec;
+ }
+
+ 

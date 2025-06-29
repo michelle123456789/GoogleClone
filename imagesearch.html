@@ -1,11 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Image Search</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Search</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
     </head>
     <body>
-        <a href="index.html">Google Search</a>
-        
-        <h1>IMAGE SEARCH</h1>
+        <!--Header-->
+        <div class = "header">
+            <div class = "header_left">
+                <span class="material-symbols-outlined header_apps">menu</span>
+                <span class="material-symbols-outlined header_apps">account_circle</span>
+            </div>
+            <div class = "header_right">
+                <a href="index.html">Google Search</a>
+            </div>
+        </div>
+        <!-- End of Header -->
+        <!-- Start Main -->
+        <div class="mainBody">
+            <div class="logo">
+                <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" alt="Google">
+                <h2>Images</h2>
+            </div>
+            <div class="search">
+                <form action = "https://google.com/search">
+                        <div class="search_input">
+                            <span class="material-symbols-outlined search_apps">search</span>
+                            <input type="hidden" name="tbm" value="isch">
+                            <input type="text" name="q">
+                            <span class="material-symbols-outlined search_apps" >mic</span>
+                        </div>
+                        
+                        <div class = "search_buttons">
+                            <input type="submit" value="Image Search">
+                        </div>
+                </form>
+            </div>
+        </div>
+        <!-- End Main -->
     </body>
 </html>

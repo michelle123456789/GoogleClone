@@ -1,11 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Advanced Search</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Search</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
     </head>
     <body>
-        <a href="index.html">Google Search</a>
-        
-        <h1>ADVANCED SEARCH</h1>
-    <body>
+        <!--Header-->
+        <div class = "header">
+            <div class = "header_left">
+                <span class="material-symbols-outlined header_apps">menu</span>
+                <span class="material-symbols-outlined header_apps">account_circle</span>
+            </div>
+            <div class = "header_right">
+                <a href="index.html">Google Search</a>
+            </div>
+        </div>
+        <!-- End of Header -->
+        <!-- Start Main -->
+        <div class="mainBody">
+            <div class="logo">
+                <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" alt="Google">
+                <h2>Advanced Search</h2>
+            </div>
+            <form class="advanced_search_input" action = "https://google.com/search">
+                <p>Find pages with ...</p>
+                <div class="questions">
+                    <div class="indiv_question">
+                        <label>all these words:</label>
+                        <input type="text" name="q">
+                    </div>
+                    <div class="indiv_question">
+                        <label>this exact word or phrase:</label>
+                        <input type="text" name="q">
+                    </div>
+                    <div class="indiv_question">
+                        <label>any of these words:</label>
+                        <input type="text" name="q">
+                    </div>
+                    <div class="indiv_question">
+                        <label>none of these words:</label>
+                        <input type="text" name="q">
+                    </div>
+                </div>              
+                <div class = "advanced_buttons">
+                    <input type="submit" value="Advanced Search">
+                </div>
+            </form>
+        </div>
+        <!-- End Main -->
+    </body>
 </html>
